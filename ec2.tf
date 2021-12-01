@@ -11,3 +11,10 @@ resource "aws_instance" "web" {
     Name = "Rakesh_HelloWorld"
   }
 }
+
+
+
+executing steps:
+terraform init
+terraform plan
+terraform apply
