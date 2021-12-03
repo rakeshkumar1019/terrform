@@ -1,3 +1,5 @@
+reference https://dev.to/chefgs/create-apache-web-server-in-aws-using-terraform-1fpj
+-----------------------------------------
 file1 name main.tf
 ___________________________________________________________
 terraform {
