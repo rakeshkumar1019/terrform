@@ -9,7 +9,13 @@ pipeline {
             steps {   
                 script{
                       if(BRANCH_NAME == "main") {
-                          echo BRANCH_NAME 
+                          echo "main" 
+                      }
+                      if(BRANCH_NAME == "development") {
+                          echo "development"
+                      }
+                      if(BRANCH_NAME == "staging") {
+                          echo "staging"
                       }
                 }
                     
