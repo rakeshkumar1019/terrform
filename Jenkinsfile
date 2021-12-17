@@ -13,6 +13,6 @@ pipeline {
     }
 }
 def getDockerTag(){
-     def tag = sh script: 'git branch --show-current', returnStdout: true
+     def tag = sh script: 'git branch', returnStdout: true
      return tag
 }
