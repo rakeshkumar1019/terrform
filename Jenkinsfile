@@ -2,7 +2,7 @@ pipeline {
     agent any
      environment {
       DOCKER_TAG = getDockerTag()
-      BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
+      BRANCH_NAME = "${GIT_BRANCH.split("/")[0]}"
      }
 
     stages {
