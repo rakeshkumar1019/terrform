@@ -8,12 +8,12 @@ pipeline {
         stage('print') {
             steps {
                sh "echo Hello World"
-                 sh " echo '${DOCKER_TAG}' "
+                 sh " echo  branch name '${DOCKER_TAG}' "
             }
         }
     }
 }
 def getDockerTag(){
-     def tag = sh script: 'git branch', returnStdout: true
+     def tag = sh script: 'git branch --show-current', returnStdout: true
      return tag
 }
