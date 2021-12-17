@@ -1,7 +1,6 @@
 pipeline {
     agent any
      environment {
-      DOCKER_TAG = getDockerTag()
       BRANCH_NAME = "${GIT_BRANCH.split("/")[0]}"
      }
 
@@ -12,8 +11,4 @@ pipeline {
             }
         }
     }
-}
-def getDockerTag(){
-     def tag = sh script: 'git branch', returnStdout: true
-     return tag
 }
