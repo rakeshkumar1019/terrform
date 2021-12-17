@@ -1,19 +1,14 @@
 pipeline {
     agent any
      environment {
-      DOCKER_TAG = getDockerTag()
+      BRANCH_NAME = "${GIT_BRANCH.split("/")[0]}"
      }
 
     stages {
-        stage('print') {
+        stage('print branch name') {
             steps {
-               sh "echo Hello World"
-                echo  "'${DOCKER_TAG}'"
+                echo BRANCH_NAME 
             }
         }
     }
-}
-def getDockerTag(){
-     def tag = sh script: 'git branch --show-current', returnStdout: true
-     return tag
 }
