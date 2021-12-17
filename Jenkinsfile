@@ -8,8 +8,11 @@ pipeline {
         stage('print branch name') {
             steps {
                 script {
-                    if(BRANCH_NAME == "main){
-                       echo BRANCH_NAME  
+                    if(BRANCH_NAME == "main) {
+                          stage ('Stage 1') {
+                            echo BRANCH_NAME 
+                        }
+                        
                     }
                 }
                
