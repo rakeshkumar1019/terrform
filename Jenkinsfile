@@ -6,9 +6,22 @@ pipeline {
 
     stages {
         stage('print branch name') {
-            steps {
-                echo BRANCH_NAME 
-            }
+            steps {   
+                script{
+                      if(BRANCH_NAME == "main") {
+                          echo "main" 
+                      }
+                      if(BRANCH_NAME == "development") {
+                          echo "development"
+                      }
+                      if(BRANCH_NAME == "staging") {
+                          echo "staging"
+                      }
+                }
+                    
+                        
+             }
+               
         }
     }
 }
