@@ -8,7 +8,7 @@ pipeline {
         stage('print') {
             steps {
                sh "echo Hello World"
-                 sh " '${DOCKER_TAG}' "
+                 sh " echo '${DOCKER_TAG}' "
             }
         }
     }
