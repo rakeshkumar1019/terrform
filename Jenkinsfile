@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('print branch name') {
             steps {
-                echo 'Hello World-${DOCKER_TAG}'
+               sh " echo Hello World-${DOCKER_TAG} "
             }
         }
     }
