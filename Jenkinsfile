@@ -5,9 +5,10 @@ pipeline {
      }
 
     stages {
-        stage('print branch name') {
+        stage('print') {
             steps {
-               sh " echo Hello World-${DOCKER_TAG} "
+               sh "echo Hello World"
+                 sh "${DOCKER_TAG}"
             }
         }
     }
