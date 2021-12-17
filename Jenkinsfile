@@ -7,7 +7,12 @@ pipeline {
     stages {
         stage('print branch name') {
             steps {
-                echo BRANCH_NAME 
+                script {
+                    if(BRANCH_NAME == "main){
+                       echo BRANCH_NAME  
+                    }
+                }
+               
             }
         }
     }
