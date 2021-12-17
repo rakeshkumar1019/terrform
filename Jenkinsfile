@@ -14,6 +14,6 @@ pipeline {
     }
 }
 def getDockerTag(){
-     def tag = sh script: 'git branch --contains HEAD', returnStdout: true
+     def tag = sh script: 'git branch', returnStdout: true
      return tag
 }
