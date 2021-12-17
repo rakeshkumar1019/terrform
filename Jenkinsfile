@@ -13,6 +13,6 @@ pipeline {
     }
 }
 def getDockerTag(){
-     def tag = sh script: 'git symbolic-ref --short HEAD', returnStdout: true
+     def tag = sh script: 'git branch --contains HEAD', returnStdout: true
      return tag
 }
